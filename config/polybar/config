@@ -33,14 +33,15 @@ white       = ${xrdb:Polybar.color7}
 ;; ========================== WORKSPACES BAR =====================
 
 [bar/workspaces]
-width = 17%
+width = 30%
+;17%
 height = 30px
 offset-x = 10px 
 offset-y = 5px
 radius = 12
 fixed-center = true
 tray-position = right
-
+tray-padding-right=2
 background = ${colors.background}
 foreground = ${colors.foreground}
 
@@ -50,14 +51,16 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 =Fira Code Nerd Font:pixelsize=16;2
-font-1 = Material Design Icons:pixelsize=18:style:Regular;5
-font-2 = Material Design Icons:pixelsize=50:style:Regular;3
-font-3 = BreezeSans:pixelsize=22:style=Bold;10
+font-0 =Fira Code Nerd Font:pixelsize=10;2
+font-1 = RobotoMono Nerd Font:pixelsize=14;2
+;Fira Code Nerd Font:pixelsize=10;2 
+;Material Design Icons:pixelsize=12:style:Regular;2
+;font-2 = Material Design Icons:pixelsize=50:style:Regular;3
+;font-3 = BreezeSans:pixelsize=22:style=Bold;10
 
 ;modules-right = wlan
 modules-left = i3
-
+modules-center=cpu memory temperature
 wm-restack = i3
 override-redirect = true
 
@@ -69,7 +72,7 @@ cursor-scroll = default
 [bar/music]
 width = 25%
 height = 30px
-offset-x = 37.25%
+offset-x = 34.25%
 offset-y = 5px
 radius = 12
 fixed-center = true
@@ -101,9 +104,9 @@ cursor-scroll = default
 ;; =================== BAR STATUS =========================
 
 [bar/status]
-width = 25%
+width = 36%
 height = 30px
-offset-x = 73%
+offset-x = 64%
 offset-y = 5px
 radius = 12
 fixed-center = true
@@ -117,13 +120,15 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = RobotoMono Nerd Font:pixelsize=14;BreezeSans:pixelsize=12;:style=Bold
+font-0 = RobotoMono Nerd Font:pixelsize=14;2
+;BreezeSans:pixelsize=12;:style=Bold
 ;font-1 =  Fira Code Nerd Font:pixelsize=12;;-10
 ;font-0 = Material Design Icons:pixelsize=10:style:Regular;2
 ;font-3 = Fira Code Nerd Font:pixelsize=8;10
 ;font-0 = Fira Code Nerd Font:pixelsize=12;-8
 
 ;modules-center = power-menu 
+modules-right=network
 modules-left=battery   
 modules-center=volume date
 wm-restack = i3
@@ -138,7 +143,7 @@ cursor-scroll = default
 [bar/info]
 width = 10%
 height = 30px
-offset-x = 72%:-5
+offset-x = 22%:-5
 offset-y = 5px
 radius = 12
 fixed-center = true
@@ -244,7 +249,15 @@ label-urgent-padding = 1
 
 
 
-
+;;=========================Network==========================
+[module/network]
+type = internal/network
+interface = wlan0
+interval = 1.0
+label-connected = "%downspeed%  %upspeed%"
+label-disconnected = disconnected
+label-connected-background = #132d57 
+;#FF0000
 ;; ======================== SPOTIFY =========================
 
 [module/spotify]
@@ -337,7 +350,7 @@ type = internal/cpu
 interval = 1
 format = <label>
 
-format-prefix = "" 
+format-prefix = "  " 
 label = "%{T2}%percentage%%%{T2} "
 
 
@@ -349,7 +362,7 @@ type = internal/temperature
 format = <label>
 format-prefix = "  "
 
-hwmon-path = /sys/devices/pci0000:00/0000:00:08.1/0000:07:00.0/hwmon/hwmon2/temp1_input
+hwmon-path =/sys/devices/platform/coretemp.0/hwmon/hwmon5/temp1_input
 
 label = "%{T2}%temperature-c%%{T-}  "
 
@@ -360,7 +373,7 @@ label = "%{T2}%temperature-c%%{T-}  "
 type = internal/memory
 
 interval = 2
-format-prefix = "ﴵ  "
+format-prefix = " ﴵ  "
 label = "%{T2}%percentage_used%%%{T-}   " 
 
 
