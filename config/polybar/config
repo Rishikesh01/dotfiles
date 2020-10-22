@@ -40,6 +40,7 @@ offset-y = 5px
 radius = 12
 fixed-center = true
 tray-position = right
+
 background = ${colors.background}
 foreground = ${colors.foreground}
 
@@ -49,10 +50,10 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 =  Fira Code Nerd Font:pixelsize=16;1
-font-1 = Material Design Icons:pixelsize=16:style:Regular;2
+font-0 =Fira Code Nerd Font:pixelsize=16;2
+font-1 = Material Design Icons:pixelsize=18:style:Regular;5
 font-2 = Material Design Icons:pixelsize=50:style:Regular;3
-font-3 = BreezeSans:pixelsize=18:style=Bold;-10
+font-3 = BreezeSans:pixelsize=22:style=Bold;10
 
 ;modules-right = wlan
 modules-left = i3
@@ -124,7 +125,7 @@ font-0 = RobotoMono Nerd Font:pixelsize=14;BreezeSans:pixelsize=12;:style=Bold
 
 ;modules-center = power-menu 
 modules-left=battery   
-modules-right=volume date
+modules-center=volume date
 wm-restack = i3
 override-redirect = true
 
@@ -321,7 +322,8 @@ type = internal/pulseaudio
 
 format = <label>
 
-label-volume = "󰎇%{T2}%percentage%%%{T-}  "
+label-volume = "%{T2}%percentage%%%{T-}" 
+;;%{T2}%percentage%%%{T-}
 
 label-muted = "mute"
 label-muted-foreground = #607290
