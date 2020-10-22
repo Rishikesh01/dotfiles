@@ -7,5 +7,6 @@
 	rofi
 	playerctl
 	nm-applet
+	im_sensors
 	
 after copying copy the Xresources file to ~/.Xresouces
