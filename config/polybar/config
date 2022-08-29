@@ -36,12 +36,20 @@ white       = ${xrdb:Polybar.color7}
 width = 30%
 ;17%
 height = 30px
-offset-x = 10px 
+offset-x = 6px 
 offset-y = 5px
 radius = 12
 fixed-center = true
+;tray-position = right
+;tray-detach=true
+;tray-padding-right=4
+;tray-offset-x = -12
 tray-position = right
-tray-padding-right=2
+tray-detached = true
+;tray-maxsize = 16
+tray-offset-x = -10 
+tray-padding = 4
+
 background = ${colors.background}
 foreground = ${colors.foreground}
 
@@ -62,7 +70,7 @@ font-1 = RobotoMono Nerd Font:pixelsize=14;2
 modules-left = i3
 modules-center=cpu memory temperature
 wm-restack = i3
-override-redirect = true
+override-redirect =true
 
 cursor-click = pointer
 cursor-scroll = default
@@ -72,11 +80,11 @@ cursor-scroll = default
 [bar/music]
 width = 25%
 height = 30px
-offset-x = 34.25%
+offset-x = 34.10%
 offset-y = 5px
 radius = 12
 fixed-center = true
-
+enable-ipc = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
@@ -95,7 +103,7 @@ font-3 = BreezeSans:pixelsize=18:style=Bold;-10
 modules-center = spotify  prev toggle next
 
 wm-restack = i3
-override-redirect = true
+override-redirect =true
 
 cursor-click = pointer
 cursor-scroll = default
@@ -104,9 +112,9 @@ cursor-scroll = default
 ;; =================== BAR STATUS =========================
 
 [bar/status]
-width = 36%
+width = 38.5%
 height = 30px
-offset-x = 64%
+offset-x = 61.5%
 offset-y = 5px
 radius = 12
 fixed-center = true
@@ -114,7 +122,7 @@ fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-padding-left = 2
+padding-left = 0
 padding-right = 0
 
 module-margin-left = 0
@@ -129,8 +137,8 @@ font-0 = RobotoMono Nerd Font:pixelsize=14;2
 
 ;modules-center = power-menu 
 modules-right=network
-modules-left=battery   
-modules-center=volume date
+modules-left=battery  
+modules-center=volume date filesystem
 wm-restack = i3
 override-redirect = true
 
@@ -166,11 +174,28 @@ font-4 = Fira Code Nerd Font:pixelsize=10;-8
 modules-center = cpu temperature memory
 modules-left = close
 
-wm-restack = i3
+wm-restack =i3
 override-redirect = true
 
 cursor-click = pointer
 cursor-scroll = default
+
+;;====================filesystem=============================
+
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted = "🖴 %free%"
+
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+
+
 ;;=====================battery===============================
 [module/battery]
 type = internal/battery
@@ -184,7 +209,7 @@ format-charging = <animation-charging><label-charging>
 format-discharging = <ramp-capacity><label-discharging>
 format-full = <ramp-capacity><label-full>
 
-label-charging = %percentage% %(%time%)
+label-charging = %percentage%%(%time%)
 label-discharging = %percentage% %(%time%)
 label-full = Fully charged
 
@@ -221,7 +246,8 @@ animation-charging-padding = 1
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
-wrapping-scroll = false
+wrapping-scroll =true
+;false
 
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
@@ -282,7 +308,7 @@ format-padding = 1
 label = %output%
 
 tail = true
-click-left = playerctl play-pause &
+click-left = playerctl --player=spotify play-pause
 
 
 ;; ======================== PREV =============================
@@ -295,7 +321,7 @@ content-foreground = ${colors.cyan}
 content-padding = 2
 content-font = 2
 
-click-left = playerctl previous &
+click-left = playerctl --player=spotify previous 
 
 
 ;; ======================== NEXT =============================
@@ -308,7 +334,7 @@ content-foreground = ${colors.cyan}
 content-padding = 2
 content-font = 2
 
-click-left = playerctl next &
+click-left = playerctl --player=spotify next 
 
 
 ;; ======================= DATE ===============================

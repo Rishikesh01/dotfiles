@@ -8,7 +8,8 @@ killall -q polybar
 # Launch bar1 and bar2
 echo "---" |
 
-polybar music & polybar workspaces & polybar status
+polybar music & polybar workspaces & polybar status & 
+#polybar info
 
 
 echo "Bars launched..."
