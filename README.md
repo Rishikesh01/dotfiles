@@ -1,6 +1,6 @@
 # dotfiles
 
-##Install:
+## Install:
 	Nerdfonts
 	FeraCode fonts
 	picom
