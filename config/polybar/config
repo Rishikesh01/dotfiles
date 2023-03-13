@@ -80,7 +80,7 @@ cursor-scroll = default
 [bar/music]
 width = 25%
 height = 30px
-offset-x = 34.10%
+offset-x = 32.90%
 offset-y = 5px
 radius = 12
 fixed-center = true
@@ -112,9 +112,9 @@ cursor-scroll = default
 ;; =================== BAR STATUS =========================
 
 [bar/status]
-width = 38.5%
+width = 39%
 height = 30px
-offset-x = 61.5%
+offset-x = 60.5%
 offset-y = 5px
 radius = 12
 fixed-center = true
@@ -278,9 +278,9 @@ label-urgent-padding = 1
 ;;=========================Network==========================
 [module/network]
 type = internal/network
-interface = wlan0
+interface = wlp48s0
 interval = 1.0
-label-connected = "%downspeed%  %upspeed%"
+label-connected = " %downspeed%  %upspeed% "
 label-disconnected = disconnected
 label-connected-background = #132d57 
 ;#FF0000
