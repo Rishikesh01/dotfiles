@@ -11,3 +11,9 @@
 	fontaswome
 	
 after copying copy the Xresources file to ~/.Xresouces
+
+## groups to add
+
+sys bumblebee network scanner power docker libvirt rfkill users video storage optical lp kvm audio wheel boris
+
+
