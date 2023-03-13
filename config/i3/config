@@ -186,7 +186,7 @@ exec_always --no-startup-id nm-applet
 exec --no-startup-id feh --bg-fill ~/Downloads/wallpaper1.jpg
 
 #Picom
-exec_always --no-startup-id picom  --experimental-backends -b --config ~/.config/picom/picom.conf
+exec_always --no-startup-id picom   -b --config ~/.config/picom/picom.conf
 
 #Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
