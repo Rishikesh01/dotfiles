@@ -19,6 +19,7 @@ font pango:monospace 18
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 font pango:DejaVu Sans Mono 10
 
+
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -37,7 +38,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+q kill
 
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-7/launcher.sh
-
+bindsym $mod+Shift+d exec --no-startup-id ~/.config/rofi/powermenu/type-1/powermenu.sh
 
 # change focus
 bindsym $mod+j focus left
@@ -183,8 +184,8 @@ exec_always --no-startup-id xrdb -merge ~/.Xresources/.Xresources
 
 exec_always --no-startup-id nm-applet
 
-exec --no-startup-id feh --bg-fill ~/Downloads/wallpaper1.jpg
-
+#exec --no-startup-id feh --bg-fill ~/Downloads/wallpaper1.jpg
+exec --no-startup-id variety
 #Picom
 exec_always --no-startup-id picom   -b --config ~/.config/picom/picom.conf
 
@@ -209,8 +210,6 @@ exec kitty
 #apps assigned#
 ###############
 for_window[workspace=$ws1] layout tabbed
-assign[class="Chromium"]$ws3
-
 assign[class ="Code"]$ws2
 assign[class ="code-oss"]$ws2
 assign[class ="Eclipse"]$ws2
@@ -220,14 +219,9 @@ assign[class ="java-lang-Thread"]$ws2
 assign[class ="Java"]$ws2
 assign[class ="jetbrains-idea"]$ws2
 assign[class="jetbrains-clion"]$ws2
-
-
-
-
 assign[class ="Stremio"]$ws4
 assign[class ="TelegramDesktop"]$ws5
 assign[class ="Bettergram"]$ws5
-assign[class ="Thunar"]$ws6
 
 for_window [class="Spotify"] move to workspace $ws10
 
@@ -237,11 +231,11 @@ for_window [class="Spotify"] move to workspace $ws10
 #############################
 
 # Set inner/outer gaps
-gaps inner 10
-gaps outer 0
-#border_radius 5
-gaps top 30
+gaps inner 5
+gaps outer 5
+gaps top 35
 
+smart_borders on
 
 ##########old gaps########################
 # change inner gaps
@@ -404,3 +398,5 @@ client.background       $bg
 
 # Hide title
 for_window [class="^.*"] border pixel 2
+
+
