@@ -7,10 +7,13 @@
     "margin-right": 10,
     "spacing": 5, // Gaps between modules (4px)
     "modules-left": [ "cpu", "memory","disk","battery","tray"],
-    "modules-center": ["wlr/workspaces"],
+    "modules-center": ["hyprland/workspaces"],
     "modules-right": ["bluetooth","pulseaudio", "network#enp","network#wifi",  "clock"],
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
       "format": "{icon}",
+      "disable-scroll": false,
+	  "on-scroll-up": "hyprctl dispatch workspace e-1",
+	  "on-scroll-down": "hyprctl dispatch workspace e+1",
       "on-click": "activate",
       "format-icons": {
         "1": "",
@@ -22,6 +25,11 @@
         "active": "",
         "default": ""
       }
+    },
+
+    "bluetooth": {
+        "format": " {status}",
+        "on-click": "bash -c blueman-manager"
     },
     "hyprland/window": {
         "format": "{}"
@@ -54,12 +62,12 @@
         "on-click": "",
     },
     "network#enp": {
-        "interface":"enp49s0",
+        "interface":"enp48s0",
         "format-ethernet": " {bandwidthUpBytes} {bandwidthDownBytes}",
         "format-disconnected": "",
     },
     "network#wifi":{
-        "interface":"wlp48s0",
+        "interface":"wlp47s0",
         "format-wifi": "直 {bandwidthUpBytes} {bandwidthDownBytes}",
         "format-disconnected": "",
     },
@@ -80,9 +88,6 @@
         },
     },
 
-    "bluetooth": {
-        "format": " {status}",
-    },
 
       "tray": {
         "icon-size": 19,
