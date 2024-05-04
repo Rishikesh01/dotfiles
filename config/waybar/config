@@ -65,11 +65,13 @@
         "interface":"enp48s0",
         "format-ethernet": " {bandwidthUpBytes} {bandwidthDownBytes}",
         "format-disconnected": "",
+        "interval": 5,
     },
     "network#wifi":{
         "interface":"wlp47s0",
         "format-wifi": "直 {bandwidthUpBytes} {bandwidthDownBytes}",
         "format-disconnected": "",
+        "interval": 5,
     },
 
     "pulseaudio": {
