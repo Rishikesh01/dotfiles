@@ -1,0 +1,26 @@
+[global_config]
+  geometry_hinting = True
+  borderless = True
+  extra_styling = False
+[keybindings]
+[profiles]
+  [[default]]
+    background_type = image
+    font = FiraCode Nerd Font 18
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scroll_on_keystroke = False
+    scrollback_infinite = True
+    palette = "#2e3436:#cc0000:#4e9a06:#c4a000:#3584e4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+[plugins]
