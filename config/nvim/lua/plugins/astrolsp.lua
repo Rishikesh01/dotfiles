@@ -90,11 +90,23 @@ return {
       n = {
         -- a `cond` key can provided as the string of a server capability to be required to attach, or a function with `client` and `bufnr` parameters from the `on_attach` that returns a boolean
         gI = {
-          function() vim.lsp.buf.implementation() end,
-          desc = "Implementation of current symbol",
+          function() require("snacks").picker.lsp_implementations() end,
+          desc = "GoTo Implementation",
+        },
+        gri = {
+          function() require("snacks").picker.lsp_implementations() end,
+          desc = "GoTo Implementation",
+        },
+        grr = {
+          function() require("snacks").picker.lsp_references() end,
+          desc = "Show references",
+        },
+        gd = {
+          function() require("snacks").picker.lsp_definitions() end,
+          desc = "GoTo definitions",
         },
         gD = {
-          function() vim.lsp.buf.declaration() end,
+          function() require("snacks").picker.lsp_declarations() end,
           desc = "Declaration of current symbol",
           cond = "textDocument/declaration",
         },

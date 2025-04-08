@@ -7,6 +7,7 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
 
+  --{ import = "astrocommunity.recipes.picker-nvchad-theme" },
   { import = "astrocommunity.editing-support.conform-nvim" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.lua" },
