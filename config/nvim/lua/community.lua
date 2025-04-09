@@ -19,6 +19,7 @@ return {
   { import = "astrocommunity.debugging.persistent-breakpoints-nvim" },
   { import = "astrocommunity.pack.docker" },
 
+  { import = "astrocommunity.recipes.picker-lsp-mappings" },
   { import = "astrocommunity.recipes.vscode" },
   -- import/override with your plugins folder
 }
