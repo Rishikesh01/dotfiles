@@ -42,17 +42,14 @@ return {
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
     config = {
-      -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
-      rust_analyzer = {
+      gopls = {
         settings = {
-          ["rust-analyzer"] = {
-            cargo = {
-              extraEnv = { CARGO_PROFILE_RUST_ANALYZER_INHERITS = "dev" },
-              extraArgs = { "--profile", "rust-analyzer" },
-            },
+          gopls = {
+            gofumpt = false,
           },
         },
       },
+      -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
     },
     -- customize how language servers are attached
     handlers = {
@@ -89,27 +86,27 @@ return {
     mappings = {
       n = {
         -- a `cond` key can provided as the string of a server capability to be required to attach, or a function with `client` and `bufnr` parameters from the `on_attach` that returns a boolean
-        gI = {
-          function() require("snacks").picker.lsp_implementations() end,
-          desc = "GoTo Implementation",
-        },
-        gri = {
-          function() require("snacks").picker.lsp_implementations() end,
-          desc = "GoTo Implementation",
-        },
-        grr = {
-          function() require("snacks").picker.lsp_references() end,
-          desc = "Show references",
-        },
-        gd = {
-          function() require("snacks").picker.lsp_definitions() end,
-          desc = "GoTo definitions",
-        },
-        gD = {
-          function() require("snacks").picker.lsp_declarations() end,
-          desc = "Declaration of current symbol",
-          cond = "textDocument/declaration",
-        },
+        -- gD = {
+        --   function() require("snacks").picker.lsp_declarations() end,
+        --   desc = "Declaration of current symbol",
+        --   cond = "textDocument/declaration",
+        -- },
+        -- gI = {
+        --   function() require("snacks").picker.lsp_implementations() end,
+        --   desc = "GoTo Implementation",
+        -- },
+        -- gri = {
+        --   function() require("snacks").picker.lsp_implementations() end,
+        --   desc = "GoTo Implementation",
+        -- },
+        -- gd = {
+        --   function() require("snacks").picker.lsp_definitions() end,
+        --   desc = "GoTo Definition",
+        -- },
+        -- grr = {
+        --   function() require("snacks").picker.lsp_references() end,
+        --   desc = "find symbol references",
+        -- },
         ["<Leader>uY"] = {
           function() require("astrolsp.toggles").buffer_semantic_tokens() end,
           desc = "Toggle LSP semantic highlight (buffer)",

@@ -4,8 +4,6 @@
 
 ---@type LazySpec
 return {
-
-  -- == Examples of Adding Plugins ==
   {
     "folke/snacks.nvim",
     optional = true,
@@ -50,6 +48,7 @@ return {
       },
     },
   },
+  -- == Examples of Adding Plugins ==
   {
     "stevearc/conform.nvim",
     opts = function(_, opts)
@@ -58,6 +57,7 @@ return {
       opts.formatters_by_ft.go = { "gofmt", "goimports" }
     end,
   },
+
   "andweeb/presence.nvim",
   {
     "ray-x/lsp_signature.nvim",
@@ -92,7 +92,7 @@ return {
   },
 
   -- You can disable default plugins as follows:
-  -- { "max397574/better-escape.nvim", enabled = false },
+  --{ "max397574/better-escape.nvim", enabled = false },
 
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
   {
