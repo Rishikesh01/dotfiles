@@ -86,27 +86,27 @@ return {
     mappings = {
       n = {
         -- a `cond` key can provided as the string of a server capability to be required to attach, or a function with `client` and `bufnr` parameters from the `on_attach` that returns a boolean
-        -- gD = {
-        --   function() require("snacks").picker.lsp_declarations() end,
-        --   desc = "Declaration of current symbol",
-        --   cond = "textDocument/declaration",
-        -- },
-        -- gI = {
-        --   function() require("snacks").picker.lsp_implementations() end,
-        --   desc = "GoTo Implementation",
-        -- },
-        -- gri = {
-        --   function() require("snacks").picker.lsp_implementations() end,
-        --   desc = "GoTo Implementation",
-        -- },
-        -- gd = {
-        --   function() require("snacks").picker.lsp_definitions() end,
-        --   desc = "GoTo Definition",
-        -- },
-        -- grr = {
-        --   function() require("snacks").picker.lsp_references() end,
-        --   desc = "find symbol references",
-        -- },
+        gD = {
+          function() require("snacks").picker.lsp_declarations() end,
+          desc = "Declaration of current symbol",
+          cond = "textDocument/declaration",
+        },
+        gI = {
+          function() require("snacks").picker.lsp_implementations() end,
+          desc = "GoTo Implementation",
+        },
+        gri = {
+          function() require("snacks").picker.lsp_implementations() end,
+          desc = "GoTo Implementation",
+        },
+        gd = {
+          function() require("snacks").picker.lsp_definitions() end,
+          desc = "GoTo Definition",
+        },
+        grr = {
+          function() require("snacks").picker.lsp_references() end,
+          desc = "find symbol references",
+        },
         ["<Leader>uY"] = {
           function() require("astrolsp.toggles").buffer_semantic_tokens() end,
           desc = "Toggle LSP semantic highlight (buffer)",

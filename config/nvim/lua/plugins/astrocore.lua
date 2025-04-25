@@ -58,7 +58,8 @@ return {
         -- second key is the lefthand side of the map
 
         -- navigate buffer tabs
-        ["<Leader>lt"] = { function() require("neotest").run.run() end, desc = "run single test" },
+        ["<Leader>ltl"] = { function() require("neotest").run.run_last() end, desc = "run last test" },
+        ["<Leader>ltt"] = { function() require("neotest").run.run() end, desc = "run single test" },
         ["<Leader>lO"] = { function() require("neotest").output_panel.toggle() end, desc = "open test output" },
         ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
