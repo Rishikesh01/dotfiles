@@ -7,50 +7,6 @@ return {
 
   -- == Examples of Adding Plugins ==
   {
-    "folke/snacks.nvim",
-    optional = true,
-    specs = {
-      {
-        "AstroNvim/astroui",
-        ---@param opts AstroUIOpts
-        opts = function(_, opts)
-          if not opts.highlights then opts.highlights = {} end
-          local original_init = opts.highlights.init
-          local init_function
-          if type(original_init) == "table" then
-            init_function = function() return original_init end
-          else
-            init_function = original_init
-          end
-          opts.highlights.init = require("astrocore").patch_func(init_function, function(orig, colors_name)
-            local highlights = orig(colors_name) or {}
-
-            local get_hlgroup = require("astroui").get_hlgroup
-            -- get highlights from highlight groups
-            local bg = get_hlgroup("Normal").bg
-            local bg_alt = get_hlgroup("Visual").bg
-            local green = get_hlgroup("String").fg
-            local red = get_hlgroup("Error").fg
-            -- return a table of highlights for telescope based on
-            -- colors gotten from highlight groups
-            highlights.SnacksPickerBorder = { fg = bg_alt, bg = bg }
-            highlights.SnacksPicker = { bg = bg }
-            highlights.SnacksPickerPreviewBorder = { fg = bg, bg = bg }
-            highlights.SnacksPickerPreview = { bg = bg }
-            highlights.SnacksPickerPreviewTitle = { fg = bg, bg = green }
-            highlights.SnacksPickerBoxBorder = { fg = bg, bg = bg }
-            highlights.SnacksPickerInputBorder = { fg = bg, bg = bg }
-            highlights.SnacksPickerInputSearch = { fg = red, bg = bg }
-            highlights.SnacksPickerListBorder = { fg = bg, bg = bg }
-            highlights.SnacksPickerList = { bg = bg }
-            highlights.SnacksPickerListTitle = { fg = bg, bg = bg }
-            return highlights
-          end)
-        end,
-      },
-    },
-  },
-  {
     "stevearc/conform.nvim",
     opts = function(_, opts)
       if not opts.formatters_by_ft then opts.formatters_by_ft = {} end

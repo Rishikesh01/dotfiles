@@ -4,10 +4,9 @@
 
 ---@type LazySpec
 return {
-  "AstroNvim/astrocommunity",
-  { import = "astrocommunity.pack.lua" },
+  { "AstroNvim/astrocommunity" },
 
-  --{ import = "astrocommunity.recipes.picker-nvchad-theme" },
+  { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.editing-support.conform-nvim" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.lua" },
@@ -20,6 +19,9 @@ return {
   { import = "astrocommunity.pack.docker" },
 
   { import = "astrocommunity.recipes.picker-lsp-mappings" },
+  { import = "astrocommunity.recipes.picker-nvchad-theme" },
   { import = "astrocommunity.recipes.vscode" },
+  { import = "astrocommunity.editing-support.rustowl" },
+  -- { import = "astrocommunity.project.projectmgr-nvim" },
   -- import/override with your plugins folder
 }
