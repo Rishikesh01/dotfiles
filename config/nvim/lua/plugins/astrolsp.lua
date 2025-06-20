@@ -46,6 +46,8 @@ return {
         settings = {
           gopls = {
             gofumpt = false,
+            usePlaceholders = false,
+            semanticTokens = false,
           },
         },
       },

@@ -14,7 +14,14 @@ return {
     highlights = {
       init = { -- this table overrides highlights in all themes
         -- Normal = { bg = "#000000" },
-        ["@variable"] = { fg = "#FFAE42" },
+        -- ["@variable.go"] = { fg = "#FFAE42" },
+        --
+        -- ["@variable.go"] = { fg = "#5E99B8" },
+        -- ["@variable.go"] = { fg = "#57C7A0" },
+        -- ["@property.go"] = { fg = "#D0679D", italic = true },
+        --["@property.go"] = { fg = "#7dcfff", italic = true },
+        ["@variable.go"] = { fg = "#EBCB8B" }, -- Electric blue for strong visibility
+        ["@property.go"] = { fg = "#E05179", italic = true },
       },
       astrodark = { -- a table of overrides/changes when applying the astrotheme theme
         -- Normal = { bg = "#000000" },

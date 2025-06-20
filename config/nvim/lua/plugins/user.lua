@@ -4,51 +4,79 @@
 
 ---@type LazySpec
 return {
-  {
-    "folke/snacks.nvim",
-    optional = true,
-    specs = {
-      {
-        "AstroNvim/astroui",
-        ---@param opts AstroUIOpts
-        opts = function(_, opts)
-          if not opts.highlights then opts.highlights = {} end
-          local original_init = opts.highlights.init
-          local init_function
-          if type(original_init) == "table" then
-            init_function = function() return original_init end
-          else
-            init_function = original_init
-          end
-          opts.highlights.init = require("astrocore").patch_func(init_function, function(orig, colors_name)
-            local highlights = orig(colors_name) or {}
 
-            local get_hlgroup = require("astroui").get_hlgroup
-            -- get highlights from highlight groups
-            local bg = get_hlgroup("Normal").bg
-            local bg_alt = get_hlgroup("Visual").bg
-            local green = get_hlgroup("String").fg
-            local red = get_hlgroup("Error").fg
-            -- return a table of highlights for telescope based on
-            -- colors gotten from highlight groups
-            highlights.SnacksPickerBorder = { fg = bg_alt, bg = bg }
-            highlights.SnacksPicker = { bg = bg }
-            highlights.SnacksPickerPreviewBorder = { fg = bg, bg = bg }
-            highlights.SnacksPickerPreview = { bg = bg }
-            highlights.SnacksPickerPreviewTitle = { fg = bg, bg = green }
-            highlights.SnacksPickerBoxBorder = { fg = bg, bg = bg }
-            highlights.SnacksPickerInputBorder = { fg = bg, bg = bg }
-            highlights.SnacksPickerInputSearch = { fg = red, bg = bg }
-            highlights.SnacksPickerListBorder = { fg = bg, bg = bg }
-            highlights.SnacksPickerList = { bg = bg }
-            highlights.SnacksPickerListTitle = { fg = bg, bg = bg }
-            return highlights
-          end)
-        end,
-      },
-    },
-  },
+  -- {
+  --   "folke/snacks.nvim",
+  --   opts = function(_, opts)
+  --     opts.picker = {
+  --       preview = "main",
+  --       layout = {
+  --         box = "vertical",
+  --         backdrop = false,
+  --         width = 0,
+  --         height = 0.4,
+  --         position = "bottom",
+  --         border = "top",
+  --         title = " {title} {live} {flags}",
+  --         title_pos = "left",
+  --         { win = "input", height = 1, border = "bottom" },
+  --         {
+  --           box = "horizontal",
+  --           { win = "list", border = "none" },
+  --           { win = "preview", title = "{preview}", width = 0.6, border = "left" },
+  --         },
+  --       },
+  --     }
+  --   end,
+  -- },
+
+  -- {
+  --   "folke/snacks.nvim",
+  --   optional = true,
+  --   specs = {
+  --     {
+  --       "AstroNvim/astroui",
+  --       ---@param opts AstroUIOpts
+  --       opts = function(_, opts)
+  --         if not opts.highlights then opts.highlights = {} end
+  --         local original_init = opts.highlights.init
+  --         local init_function
+  --         if type(original_init) == "table" then
+  --           init_function = function() return original_init end
+  --         else
+  --           init_function = original_init
+  --         end
+  --         opts.highlights.init = require("astrocore").patch_func(init_function, function(orig, colors_name)
+  --           local highlights = orig(colors_name) or {}
+  --
+  --           local get_hlgroup = require("astroui").get_hlgroup
+  --           -- get highlights from highlight groups
+  --           local bg = get_hlgroup("Normal").bg
+  --           local bg_alt = get_hlgroup("Visual").bg
+  --           local green = get_hlgroup("String").fg
+  --           local red = get_hlgroup("Error").fg
+  --           -- return a table of highlights for telescope based on
+  --           -- colors gotten from highlight groups
+  --           highlights.SnacksPickerBorder = { fg
+  --           = bg_alt, bg = bg }
+  --           highlights.SnacksPicker = { bg = bg }
+  --           highlights.SnacksPickerPreviewBorder = { fg = bg, bg = bg }
+  --           highlights.SnacksPickerPreview = { bg = bg }
+  --           highlights.SnacksPickerPreviewTitle = { fg = bg, bg = green }
+  --           highlights.SnacksPickerBoxBorder = { fg = bg, bg = bg }
+  --           highlights.SnacksPickerInputBorder = { fg = bg, bg = bg }
+  --           highlights.SnacksPickerInputSearch = { fg = red, bg = bg }
+  --           highlights.SnacksPickerListBorder = { fg = bg, bg = bg }
+  --           highlights.SnacksPickerList = { bg = bg }
+  --           highlights.SnacksPickerListTitle = { fg = bg, bg = bg }
+  --           return highlights
+  --         end)
+  --       end,
+  --     },
+  --   },
+  -- },
   -- == Examples of Adding Plugins ==
+
   {
     "stevearc/conform.nvim",
     opts = function(_, opts)
@@ -91,6 +119,18 @@ return {
     },
   },
 
+  {
+    "nvim-neotest/neotest",
+    opts = function(_, opts)
+      opts.adapters = opts.adapters or {}
+      table.insert(
+        opts.adapters,
+        require "neotest-golang" {
+          go_test_args = { "-count=1", "-parallel=1", "-v" },
+        }
+      )
+    end,
+  },
   -- You can disable default plugins as follows:
   --{ "max397574/better-escape.nvim", enabled = false },
 
