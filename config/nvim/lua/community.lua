@@ -8,7 +8,7 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
   -- import/override with your plugins folder
-
+  { import = "astrocommunity.scrolling.vim-smoothie" },
   { import = "astrocommunity.recipes.picker-nvchad-theme" },
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   { import = "astrocommunity.debugging.telescope-dap-nvim" },

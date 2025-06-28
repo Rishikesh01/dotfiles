@@ -20,8 +20,9 @@ return {
         -- ["@variable.go"] = { fg = "#57C7A0" },
         -- ["@property.go"] = { fg = "#D0679D", italic = true },
         --["@property.go"] = { fg = "#7dcfff", italic = true },
-        ["@variable.go"] = { fg = "#EBCB8B" }, -- Electric blue for strong visibility
-        ["@property.go"] = { fg = "#E05179", italic = true },
+        ["@variable"] = { fg = "#EBCB8B" }, -- Electric blue for strong visibility
+        ["@property"] = { fg = "#E05179", italic = true },
+        ["@function.call"] = { fg = "#7dcfff" },
       },
       astrodark = { -- a table of overrides/changes when applying the astrotheme theme
         -- Normal = { bg = "#000000" },
