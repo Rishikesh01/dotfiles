@@ -12,6 +12,7 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.debugging.nvim-dap-virtual-text" },
   { import = "astrocommunity.debugging.telescope-dap-nvim" },
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
