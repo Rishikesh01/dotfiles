@@ -7,6 +7,19 @@ return {
 
   -- == Examples of Adding Plugins ==
   {
+    "nvim-neotest/neotest",
+    dependencies = {
+      "rouge8/neotest-rust",
+    },
+    opts = function(_, opts)
+      opts.adapters = vim.list_extend(opts.adapters or {}, {
+        require "neotest-rust" {
+          args = { "--no-capture", "--cargo-quiet" },
+        },
+      })
+    end,
+  },
+  {
     "stevearc/conform.nvim",
     opts = function(_, opts)
       if not opts.formatters_by_ft then opts.formatters_by_ft = {} end
