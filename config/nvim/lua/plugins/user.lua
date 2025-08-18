@@ -4,6 +4,39 @@
 
 ---@type LazySpec
 return {
+
+  -- install without yarn or npm
+
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
+      "rouge8/neotest-rust",
+    },
+    opts = function(_, opts)
+      opts.adapters = vim.list_extend(opts.adapters or {}, {
+        require "neotest-rust" {
+          args = { "--no-capture", "--cargo-quiet" },
+        },
+      })
+    end,
+  },
+
+  {
+    "Rishikesh01/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function() vim.fn["mkdp#util#install"]() end,
+  },
+
+  -- install with yarn or npm
+  {
+    "Rishikesh01/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    build = "yarn install && yarn build",
+    init = function() vim.g.mkdp_filetypes = { "markdown" } end,
+    ft = { "markdown" },
+  },
+
   -- {
   --   "sphamba/smear-cursor.nvim",
   --   opts = {
