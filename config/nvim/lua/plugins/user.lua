@@ -7,6 +7,13 @@ return {
 
   -- == Examples of Adding Plugins ==
   {
+    "Rishikesh01/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function() vim.fn["mkdp#util#install"]() end,
+  },
+
+  {
     "nvim-neotest/neotest",
     dependencies = {
       "rouge8/neotest-rust",
