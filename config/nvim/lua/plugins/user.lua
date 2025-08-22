@@ -15,7 +15,7 @@ return {
     opts = function(_, opts)
       opts.adapters = vim.list_extend(opts.adapters or {}, {
         require "neotest-rust" {
-          args = { "--no-capture", "--cargo-quiet" },
+          args = { "--no-capture" },
         },
       })
     end,
