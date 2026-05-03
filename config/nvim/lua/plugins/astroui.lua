@@ -14,13 +14,7 @@ return {
     highlights = {
       init = { -- this table overrides highlights in all themes
         -- Normal = { bg = "#000000" },
-        -- ["@variable.go"] = { fg = "#FFAE42" },
-        --
-        -- ["@variable.go"] = { fg = "#5E99B8" },
-        -- ["@variable.go"] = { fg = "#57C7A0" },
-        -- ["@property.go"] = { fg = "#D0679D", italic = true },
-        --["@property.go"] = { fg = "#7dcfff", italic = true },
-        ["@variable"] = { fg = "#EBCB8B" }, -- Electric blue for strong visibility
+        ["@variable"] = { fg = "#FFAE42" },
         ["@property"] = { fg = "#E05179", italic = true },
         ["@function.call"] = { fg = "#7dcfff" },
         ["@lsp.type.function.rust"] = { fg = "#7dcfff" },

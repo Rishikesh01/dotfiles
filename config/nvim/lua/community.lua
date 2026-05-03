@@ -16,6 +16,7 @@ return {
   { import = "astrocommunity.git.blame-nvim" },
   { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
   { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.ruby" },
@@ -28,4 +29,5 @@ return {
   { import = "astrocommunity.recipes.picker-lsp-mappings" },
   { import = "astrocommunity.utility.live-server-nvim" },
   { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.ai.opencode-nvim" },
 }
