@@ -4,8 +4,34 @@
 
 ---@type LazySpec
 return {
+  {
+    "nvim-neotest/neotest",
+    optional = false,
+    dependencies = {
+      {
+        "fredrikaverpil/neotest-golang",
+        --version = "1.15.1",
+      },
+    },
+    opts = function(_, opts)
+      if not opts.adapters then opts.adapters = {} end
+      table.insert(opts.adapters, require "neotest-golang"(require("astrocore").plugin_opts "neotest-golang"))
+    end,
+  },
 
-  -- == Examples of Adding Plugins ==
+  {
+    "nvim-neotest/neotest",
+    opts = function(_, opts)
+      opts.adapters = opts.adapters or {}
+      table.insert(
+        opts.adapters,
+        require "neotest-golang" {
+          go_test_args = { "-count=1", "-parallel=1", "-v" },
+        }
+      )
+    end,
+  },
+
   {
     "Rishikesh01/markdown-preview.nvim",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
@@ -34,6 +60,8 @@ return {
       opts.formatters_by_ft.go = { "gofmt", "goimports" }
     end,
   },
+  -- == Examples of Adding Plugins ==
+
   "andweeb/presence.nvim",
   {
     "ray-x/lsp_signature.nvim",
@@ -68,16 +96,18 @@ return {
   },
 
   -- You can disable default plugins as follows:
-  -- { "max397574/better-escape.nvim", enabled = false },
+  { "max397574/better-escape.nvim", enabled = false },
 
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
   {
     "L3MON4D3/LuaSnip",
     config = function(plugin, opts)
-      require "astronvim.plugins.configs.luasnip"(plugin, opts) -- include the default astronvim config that calls the setup call
       -- add more custom luasnip configuration such as filetype extend or custom snippets
       local luasnip = require "luasnip"
       luasnip.filetype_extend("javascript", { "javascriptreact" })
+
+      -- include the default astronvim config that calls the setup call
+      require "astronvim.plugins.configs.luasnip"(plugin, opts)
     end,
   },
 

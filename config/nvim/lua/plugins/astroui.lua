@@ -15,6 +15,9 @@ return {
       init = { -- this table overrides highlights in all themes
         -- Normal = { bg = "#000000" },
         ["@variable"] = { fg = "#FFAE42" },
+        ["@property"] = { fg = "#E05179", italic = true },
+        ["@function.call"] = { fg = "#7dcfff" },
+        ["@lsp.type.function.rust"] = { fg = "#7dcfff" },
       },
       astrodark = { -- a table of overrides/changes when applying the astrotheme theme
         -- Normal = { bg = "#000000" },

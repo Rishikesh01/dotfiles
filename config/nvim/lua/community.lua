@@ -3,8 +3,13 @@
 -- This guarantees that the specs are processed before any user plugins.
 
 ---@type LazySpec
+---@type LazySpec
 return {
-  { "AstroNvim/astrocommunity", version = "v20" },
+  -- AstroCommunity: import any community modules here
+  -- We import this file in `lazy_setup.lua` before the `plugins/` folder.
+  -- This guarantees that the specs are processed before any user plugins.
+
+  { "AstroNvim/astrocommunity" },
 
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.editing-support.conform-nvim" },
@@ -17,6 +22,7 @@ return {
   { import = "astrocommunity.debugging.telescope-dap-nvim" },
   { import = "astrocommunity.debugging.persistent-breakpoints-nvim" },
   { import = "astrocommunity.pack.docker" },
+  { import = "astrocommunity.test.neotest" },
 
   { import = "astrocommunity.recipes.picker-lsp-mappings" },
   { import = "astrocommunity.recipes.picker-nvchad-theme" },

@@ -60,7 +60,10 @@ return {
         -- navigate buffer tabs
         ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
-
+        ["<Leader>ltc"] = { function() require("neotest").output_panel.clear() end, desc = "clear output panel" },
+        ["<Leader>ltl"] = { function() require("neotest").run.run_last() end, desc = "run last test" },
+        ["<Leader>ltt"] = { function() require("neotest").run.run() end, desc = "run single test" },
+        ["<Leader>lO"] = { function() require("neotest").output_panel.toggle() end, desc = "open test output" },
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {
           function()
