@@ -1,0 +1,31 @@
+#!/bin/sh
+# Dispatch to Hyprland using whichever config syntax is currently live.
+#
+# Since 0.55, `hyprctl dispatch X` is compiled as `hl.dispatch(X)` when the
+# running config is Lua (see HyprCtl.cpp, dispatchRequest), so the legacy
+# hyprlang form stops working -- and the Lua form doesn't work under a .conf
+# config either. This wrapper tries Lua first and falls back to legacy, so the
+# same command works before and after the migration, and keeps working if the
+# Lua config is ever rolled back.
+#
+# hyprctl exits 0 even on "Invalid dispatcher", so the exit code is useless.
+# A successful dispatch prints exactly "ok", which is what we test for.
+#
+# usage: hypr-dispatch '<lua-expr>' <legacy-args...>
+#   e.g. hypr-dispatch 'hl.dsp.dpms({ action = "off" })' dpms off
+
+if [ $# -lt 2 ]; then
+    echo "usage: ${0##*/} '<lua-expr>' <legacy-args...>" >&2
+    exit 2
+fi
+
+lua_expr=$1
+shift
+
+# stdout only: stderr noise (warnings etc.) must not shift the "ok" prefix and
+# trigger a spurious fallback. Both success and dispatch errors go to stdout.
+case "$(hyprctl dispatch "$lua_expr" 2>/dev/null)" in
+    ok*) exit 0 ;;
+esac
+
+exec hyprctl dispatch "$@"
