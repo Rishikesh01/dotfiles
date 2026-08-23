@@ -30,4 +30,5 @@ return {
   { import = "astrocommunity.utility.live-server-nvim" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.ai.opencode-nvim" },
+  { import = "astrocommunity.docker.lazydocker" },
 }
