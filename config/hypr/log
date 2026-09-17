@@ -1,0 +1,291 @@
+Hyprlock version v0.9.2
+[ERR] Config has errors:
+Config error in file /home/boris/.config/hypr/hyprlock.conf at line 15: config option <general:disable_loading_anim> does not exist.
+Config error in file /home/boris/.config/hypr/hyprlock.conf at line 16: config option <general:fade_in> does not exist.
+Config error in file /home/boris/.config/hypr/hyprlock.conf at line 70: config option <input-field:dots_fade> does not exist.
+Config error in file /home/boris/.config/hypr/hyprlock.conf at line 71: config option <input-field:use_dots> does not exist.
+Proceeding ignoring faulty entries
+[LOG]   | got iface: wl_seat v9
+[LOG]    > Bound to wl_seat v9
+[LOG]   | got iface: wl_data_device_manager v3
+[LOG]   | got iface: wl_compositor v6
+[LOG]    > Bound to wl_compositor v6
+[LOG]   | got iface: wl_subcompositor v1
+[LOG]   | got iface: wl_shm v1
+[LOG]    > Bound to wl_shm v1
+[LOG]   | got iface: wp_viewporter v1
+[LOG]    > Bound to wp_viewporter v1
+[LOG]   | got iface: wp_tearing_control_manager_v1 v1
+[LOG]   | got iface: wp_fractional_scale_manager_v1 v1
+[LOG]    > Bound to wp_fractional_scale_manager_v1 v1
+[LOG]   | got iface: zxdg_output_manager_v1 v3
+[LOG]   | got iface: wp_cursor_shape_manager_v1 v1
+[LOG]    > Bound to wp_cursor_shape_manager_v1 v1
+[LOG]   | got iface: zwp_idle_inhibit_manager_v1 v1
+[LOG]   | got iface: zwp_relative_pointer_manager_v1 v1
+[LOG]   | got iface: zxdg_decoration_manager_v1 v1
+[LOG]   | got iface: wp_alpha_modifier_v1 v1
+[LOG]   | got iface: zwlr_gamma_control_manager_v1 v1
+[LOG]   | got iface: ext_foreign_toplevel_list_v1 v1
+[LOG]   | got iface: zwp_pointer_gestures_v1 v3
+[LOG]   | got iface: zwlr_foreign_toplevel_manager_v1 v3
+[LOG]   | got iface: zwp_keyboard_shortcuts_inhibit_manager_v1 v1
+[LOG]   | got iface: zwp_text_input_manager_v1 v1
+[LOG]   | got iface: zwp_text_input_manager_v3 v1
+[LOG]   | got iface: zwp_pointer_constraints_v1 v1
+[LOG]   | got iface: zwlr_output_power_manager_v1 v1
+[LOG]   | got iface: xdg_activation_v1 v1
+[LOG]   | got iface: ext_idle_notifier_v1 v2
+[LOG]   | got iface: hyprland_lock_notifier_v1 v1
+[LOG]   | got iface: ext_session_lock_manager_v1 v1
+[LOG]    > Bound to ext_session_lock_manager_v1 v1
+[LOG]   | got iface: zwp_input_method_manager_v2 v1
+[LOG]   | got iface: zwp_virtual_keyboard_manager_v1 v1
+[LOG]   | got iface: zwlr_virtual_pointer_manager_v1 v2
+[LOG]   | got iface: zwlr_output_manager_v1 v4
+[LOG]   | got iface: org_kde_kwin_server_decoration_manager v1
+[LOG]   | got iface: hyprland_focus_grab_manager_v1 v1
+[LOG]   | got iface: zwp_tablet_manager_v2 v1
+[LOG]   | got iface: zwlr_layer_shell_v1 v5
+[LOG]   | got iface: wp_presentation v2
+[LOG]   | got iface: xdg_wm_base v7
+[LOG]   | got iface: zwlr_data_control_manager_v1 v2
+[LOG]   | got iface: zwp_primary_selection_device_manager_v1 v1
+[LOG]   | got iface: xwayland_shell_v1 v1
+[LOG]   | got iface: zwlr_screencopy_manager_v1 v3
+[LOG]    > Bound to zwlr_screencopy_manager_v1 v3
+[LOG]   | got iface: hyprland_toplevel_export_manager_v1 v2
+[LOG]   | got iface: hyprland_toplevel_mapping_manager_v1 v1
+[LOG]   | got iface: hyprland_global_shortcuts_manager_v1 v1
+[LOG]   | got iface: xdg_wm_dialog_v1 v1
+[LOG]   | got iface: wp_single_pixel_buffer_manager_v1 v1
+[LOG]   | got iface: wp_security_context_manager_v1 v1
+[LOG]   | got iface: hyprland_ctm_control_manager_v1 v2
+[LOG]   | got iface: hyprland_surface_manager_v1 v2
+[LOG]   | got iface: wp_content_type_manager_v1 v1
+[LOG]   | got iface: xdg_toplevel_tag_manager_v1 v1
+[LOG]   | got iface: xdg_system_bell_v1 v1
+[LOG]   | got iface: ext_workspace_manager_v1 v1
+[LOG]   | got iface: ext_data_control_manager_v1 v1
+[LOG]   | got iface: wp_pointer_warp_v1 v1
+[LOG]   | got iface: wp_color_manager_v1 v1
+[LOG]   | got iface: wp_drm_lease_device_v1 v1
+[LOG]   | got iface: wp_linux_drm_syncobj_manager_v1 v1
+[LOG]   | got iface: wp_drm_lease_device_v1 v1
+[LOG]   | got iface: wl_drm v2
+[LOG]   | got iface: zwp_linux_dmabuf_v1 v5
+[LOG]    > Bound to zwp_linux_dmabuf_v1 v5
+[LOG]   | got iface: wl_output v4
+[LOG]    > Bound to wl_output v4
+[LOG]   | got iface: wl_output v4
+[LOG]    > Bound to wl_output v4
+[LOG] Exposed seat name: Hyprland
+[LOG] [core] dmabufFeedbackMainDevice
+[LOG] output eDP-2 name eDP-2
+[LOG] output 62 description BOE 0x0A1F  (eDP-2)
+[LOG] output 62 make BOE model 0x0A1F
+[LOG] output 62 done
+[LOG] output DP-3 name DP-3
+[LOG] output 64 description Lenovo Group Limited G27q-20 U6331G1P (DP-3)
+[LOG] output 64 make Lenovo Group Limited model G27q-20
+[LOG] output 64 done
+[LOG] Running on Hyprland
+[LOG] Locking session
+[LOG] eglQueryDmaBufModifiersEXT found 6 mods
+[LOG] [bo] has 3 plane(s)
+[LOG] [bo] chose modifier 100000000000008
+[LOG] eglQueryDmaBufModifiersEXT found 6 mods
+[LOG] [bo] has 3 plane(s)
+[LOG] [bo] chose modifier 100000000000008
+[LOG] Starting fade in
+[LOG] Got fractional scale: 100.0%
+[LOG] configure with serial 13711
+[LOG] Configuring surface for logical [Vector2D: x: 2560, y: 1600] and pixel [Vector2D: x: 2560, y: 1600]
+[LOG] Got fractional scale: 100.0%
+[LOG] configure with serial 13712
+[LOG] Configuring surface for logical [Vector2D: x: 2560, y: 1440] and pixel [Vector2D: x: 2560, y: 1440]
+[LOG] Got dma frame with size [Vector2D: x: 2560, y: 1440]
+[LOG] onLockLocked called
+[LOG] Got dma frame with size [Vector2D: x: 2560, y: 1600]
+[ERR] Invalid key down event (stray release event?)
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413326733462597 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413326738662992 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413326742803806 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413326747924954 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413326733462597 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413326738662992 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413326742803806 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413326747924954 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413326733462597 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413326738662992 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413326742803806 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413326747924954 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413326738662992 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413327028386255 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413327038756520 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413327054063339 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413327079198860 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413327129968238 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413327160101237 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413327181602801 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413327129968238 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413327175165673 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413327181602801 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413327283318020 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413327297797124 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413327333897789 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413327342017247 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413327333897789 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413327384294051 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413327342017247 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413327419197920 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413327384294051 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413327484884241 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413327419197920 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413327524976630 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413327484884241 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413327535401781 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413327535401781 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413327688176446 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413327688197406 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413327707081319 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413327723561983 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413327688197406 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413327707081319 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413327789385380 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413327688197406 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413327723561983 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413327707081319 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413327789385380 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413327723561983 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413327789385380 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413327892419642 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413327892419642 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413327951071401 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413327966353305 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413327994207791 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413328045201231 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413328072803990 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413328096879009 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413328088095336 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413328147235987 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413328197799808 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413328210198097 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413328248191972 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413328256211159 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413328299052187 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413328400340684 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413328501358459 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413328501381609 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413328513738673 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413328501381609 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413328559885701 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413328513738673 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413328602395786 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413328653456816 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413328681728824 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413328704666936 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413328695658784 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413328704666936 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413328755334662 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413328695658784 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413328704666936 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413328755334662 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413328802963512 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413328755334662 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413328802963512 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413328876472744 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413328910706383 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413328755334662 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413328802963512 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413328876472744 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413328910706383 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413329011694569 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413329045020293 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413329062215120 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413329058847423 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413329062215120 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413329112951548 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413329112951548 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413329166525951 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413329179445467 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413329213750634 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413329264329184 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413329287553299 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413329303442819 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413329314722548 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413329314722548 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413329366236758 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413329366236758 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413329408641729 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413329424820481 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413329467129711 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413329517609338 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413329529893691 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413329545338868 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413329567872399 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413329567872399 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413329618249301 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413329651213724 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413329618249301 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413329666467108 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413329718985526 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413329651213724 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413329666467108 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413329718985526 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413329769687405 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413329769687405 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413329834060140 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413329848409833 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413329870600586 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413329769687405 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413329870600586 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413329955579763 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413329870600586 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413329973066957 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413329969575787 is still pending! Skipping update.
+[LOG] Authenticating
+[LOG] PAM_PROMPT: Password: 
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413329870600586 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413329973066957 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413329955579763 is still pending! Skipping update.
+[LOG] auth: authenticated for hyprlock
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413329969575787 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413329973066957 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413330125109501 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413329973066957 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413330137644741 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413330151923814 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413330125109501 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413330137644741 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413330151923814 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413330225708336 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413330276639373 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413330225708336 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413330318930893 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413330333822997 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413330377634403 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413330377657168 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413330377657168 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413330440010818 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413330454537112 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413330478870308 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413330478870308 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413330529175360 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413330561856669 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413330529175360 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413330576510002 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413330630818903 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413330630818903 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413330681271860 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413330683248594 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413330697676189 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413330681271860 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687115824,time:1761413330697676189 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413330782051530 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687133312,time:1761413330803844149 is still pending! Skipping update.
+[LOG] Unlocking session
+[LOG] Unlocked, exiting!
+[WARN] Trying to update label, but resource label:94506687104720,time:1761413330782051530 is still pending! Skipping update.
+[WARN] Trying to update label, but resource label:94506687129152,time:1761413330832421239 is still pending! Skipping update.
+[LOG] Reached the end, exiting
